@@ -1,19 +1,13 @@
 import requests
 
-def getPoke(poke):
-    response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{poke.lower()}")
+def cats(color, text):
+    response = requests.get(f"https://cataas.com/cat/:tag/says/:text")
     if response.status_code != 200:
-        print("Error fetching data!")
+        print("Please hold!")
         return None
-    
     data = response.json()
-    return {
-        "name": data["name"],
-        "height": data["height"],
-        "weight": data["weight"],
-        "types": [t["type"]["name"] for t in data["types"]]
+    return{
+        "color": data["tag"],
+        "text": data["text"]
     }
-
-pokemon = getPoke("Bulbasaur")
-print(pokemon)
-
+catss = cats("Orange","Hello")
