@@ -1,13 +1,13 @@
 import requests
 
-def cats(color, text):
-    response = requests.get(f"https://cataas.com/cat/:tag/says/:text")
+def cats(cats):
+    response = requests.get(f"https://cataas.com/cat/:tag")
     if response.status_code != 200:
         print("Please hold!")
         return None
     data = response.json()
     return{
-        "color": data["tag"],
-        "text": data["text"]
+        "color": data["tag"]
     }
-catss = cats("Orange","Hello")
+catss = cats("Orange")
+print(catss)
