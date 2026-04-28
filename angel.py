@@ -2,9 +2,23 @@ import requests
 import tkinter as tk
 
 window = tk.Tk()
-window.title("What type of cat do you want?")
+window.title("message reverser")
 window.geometry("400x250")
 window.resizable(False, False)
+prompt = tk.Label(window,text="Click the button for a cat!",font =("Arial,16"))
+prompt.pack(pady=10)
+button = tk.Button(
+    window,
+    text="Cat here",
+    command=,
+    font = ("Arial",16),
+    bg = "pink",
+    fg = "hot pink"
+    relief="raised",
+    padx=10, pady=5
+    )
+
+window.mainloop()
 
 
 
