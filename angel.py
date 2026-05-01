@@ -1,6 +1,7 @@
 import requests
 import tkinter as tk
 from PIL import Image, ImageTk
+import time
 
 def cats():
     url = 'https://cataas.com/cat'
@@ -15,11 +16,16 @@ def cats():
     label = tk.Label(window, image=photo)
     label.pack(pady = 30)
     label.image = photo
+    
+    label.destroy
+    
+    
+    
 
 
 window = tk.Tk()
 window.title("message reverser")
-window.geometry("1000x600")
+window.geometry("1200x800")
 window.resizable(False, False)
 prompt = tk.Label(window,text="Click the button for a cat!",font =("Arial,16"))
 prompt.pack(pady=10)
@@ -34,6 +40,7 @@ button = tk.Button(
     padx=10, pady=5
     )
 button.pack(pady=20)
+
 
 
 window.mainloop()
