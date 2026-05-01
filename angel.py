@@ -4,9 +4,11 @@ from PIL import Image, ImageTk
 import time
 
 def cats():
+
     url = 'https://cataas.com/cat'
     print(url)
     response = requests.get(url)
+    label.destroy()
     with open('cat.jpeg', 'wb') as f:
         f.write(response.content)
 
@@ -16,9 +18,10 @@ def cats():
     label = tk.Label(window, image=photo)
     label.pack(pady = 30)
     label.image = photo
+
+
     
-    label.destroy
-    
+
     
     
 
