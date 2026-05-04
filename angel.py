@@ -4,14 +4,12 @@ from PIL import Image, ImageTk
 import time
 
 def cats():
-
+    photo.destory()
     url = 'https://cataas.com/cat'
     print(url)
     response = requests.get(url)
-    label.destroy()
     with open('cat.jpeg', 'wb') as f:
         f.write(response.content)
-
     images = Image.open("cat.jpeg")
     photo = ImageTk.PhotoImage(images)
 
